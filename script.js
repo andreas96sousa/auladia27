@@ -27,5 +27,24 @@ function login(){
 }
 
 function classificarTarefa(){
-    
+    resultado3.innerHTML = `Atividade: ${atividade.value} <br> Prioridade: ${prioridade.value}`
+    switch(prioridade.value){
+    case "1 - Urgente":
+        resultado3.innerHTML += ` - Urgente`;
+        break
+    case 2:
+        resultado3.innerHTML += ` - Importante`;
+        break
+    case 3:
+        resultado3.innerHTML += ` - Opcional`;
+        break
+    default:
+        resultado3.innerHTML = `Prioridade Inválida`;
+
+
+    }
+}
+
+function validarCadastro(){
+
 }

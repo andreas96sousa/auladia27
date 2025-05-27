@@ -22,12 +22,40 @@
     </div>
 
     <div class="ex02" style="display: flex; gap: 10px; flex-flow: column nowrap; width: 50%;">
-        <input type="email" placeholder="E-mail" id="email">
-        <input type="password" placeholder="Senha" id="senha">
-        <button onclick="classificarTarefa()">LOGIN</button>
+
+        <input type="text" placeholder="Atividade" id="atividade">
+
+        <input type="number" placeholder="Prioridade" id="prioridade">
+
+        <span style="font-size: 0.7rem;">
+            Graus de Prioridade: <br>
+            1 - Urgente <br>
+            2 - Importante <br>
+            3 - Opcional <br>
+        </span>
+        <button onclick="classificarTarefa()">CLASSIFICAR</button>
         <p id="resultado3">...</p>
     </div>
 
+    <div class="ex02" style="display: flex; gap: 10px; flex-flow: column nowrap; width: 50%;">
+
+        <input type="text" placeholder="Atividade" id="atividade">
+
+        <select name="opcoes" id="prioridade">
+            <option value="1">1 - Urgente</option>
+            <option value="2">2 - Importante</option>
+            <option value="3">3 - Opcional</option>
+        </select>
+
+        <span style="font-size: 0.7rem;">
+            Graus de Prioridade: <br>
+            1 - Urgente <br>
+            2 - Importante <br>
+            3 - Opcional <br>
+        </span>
+        <button onclick="validarCadastro()">CLASSIFICAR</button>
+        <p id="resultado3">...</p>
+    </div>
 
 
 
