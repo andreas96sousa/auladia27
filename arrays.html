@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <div class="ex1">
+        <h3>
+            1. Lista de Tarefas com Prioridades
+        </h3>
+        <span>
+            Crie um programa que: <br>
+            Permita ao usuário inserir uma tarefa (string) e uma prioridade (número). <br>
+            Armazene cada tarefa como uma string formatada ("Tarefa - Prioridade X") em um array. <br>
+            Exiba todas as tarefas na tela usando forEach. <br>
+            Adicione botões no HTML para adicionar uma nova tarefa e limpar a lista. <br>
+            Use innerHTML para exibir os dados. <br> <br>
+        </span>
+        <input type="text" id="atividade" placeholder="Atividade">
+        <input type="number" id="prioridade" placeholder="Prioridade">
+        <button onclick="acrescentar()">ACRESCENTAR</button> <button onclick="mostrarLista()">LISTAR</button><br>
+        <span>1 - Urgente | 2 - Importante | 3 - Opcional</span>
+        <br> <br> <br>
+        <p id="result1"></p>
+    </div>
+    <hr>
+    <div class="ex2">
+        <h3>
+            2. Cálculo de Média de Notas
+        </h3>
+        <span>
+            Crie um formulário onde o usuário insira notas (números) de um aluno uma por vez. <br>
+            Use push para adicionar a nota a um array. <br>
+            Mostre a média das notas usando reduce toda vez que uma nova nota for inserida.<br>
+            Se a média for maior ou igual a 7, exiba "Aprovado", senão, "Reprovado". <br>
+            Use innerHTML para mostrar os resultados em tempo real. <br><br>
+        </span>
+        <input type="number" id="nota" placeholder="Nota">
+        <button onclick="a()">ACRESCENTAR</button> <br>
+        <span>1 - Urgente | 2 - Importante | 3 - Opcional</span>
+        <br> <br> <br>
+        <p id="result2"></p>
+    </div>
+
+
+
+
+
+
+
+    <script src="sarray.js"></script>
+</body>
+</html>

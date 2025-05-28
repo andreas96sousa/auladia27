@@ -25,14 +25,11 @@
 
         <input type="text" placeholder="Atividade" id="atividade">
 
-        <input type="number" placeholder="Prioridade" id="prioridade">
-
-        <span style="font-size: 0.7rem;">
-            Graus de Prioridade: <br>
-            1 - Urgente <br>
-            2 - Importante <br>
-            3 - Opcional <br>
-        </span>
+        <select name="prioridade" id="prioridade">
+            <option value="1">Ungente</option>
+            <option value="2">Importante</option>
+            <option value="3">Opcional</option>
+        </select>
         <button onclick="classificarTarefa()">CLASSIFICAR</button>
         <p id="resultado3">...</p>
     </div>
@@ -41,24 +38,11 @@
 
         <input type="text" placeholder="Atividade" id="atividade">
 
-        <select name="opcoes" id="prioridade">
-            <option value="1">1 - Urgente</option>
-            <option value="2">2 - Importante</option>
-            <option value="3">3 - Opcional</option>
-        </select>
-
-        <span style="font-size: 0.7rem;">
-            Graus de Prioridade: <br>
-            1 - Urgente <br>
-            2 - Importante <br>
-            3 - Opcional <br>
-        </span>
-        <button onclick="validarCadastro()">CLASSIFICAR</button>
+        <button onclick="validarCadastro()">
+            VALIDAR
+        </button>
         <p id="resultado3">...</p>
     </div>
-
-
-
 
 
     <script src="script.js"></script>
