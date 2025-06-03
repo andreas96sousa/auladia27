@@ -1,6 +1,7 @@
 let listadeAtividades = []
 let notas = []
 let list = []
+let listaOrdenada = []
 function acrescentar(){
     switch(Number(prioridade.value)){
         case 1:
@@ -33,10 +34,8 @@ function media(){
 }
 
 function listar(){
-    listaseparada = lista.value
-    list += listaseparada.split(',')
-    list.sort
-    result3.innerHTML +=  `${list}`
-    for(let i = 0; i < list.length; i++){
+    listaSeparada = lista.value.split(",").sort()
+    for(let i = 0; i < listaSeparada.length; i++){
+        result3.innerHTML += `<hr>${listaSeparada[i]}`
     }
 }
