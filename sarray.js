@@ -1,7 +1,7 @@
 let listadeAtividades = []
 let notas = []
-let list = []
-let listaOrdenada = []
+let listaSeparada = []
+let novaLista = []
 function acrescentar(){
     switch(Number(prioridade.value)){
         case 1:
@@ -26,6 +26,8 @@ function mostrarLista(){
     listadeAtividades.sort()
     listadeAtividades.forEach(item => result1.innerHTML += `${item} <br>`)
 }
+
+
 function media(){
     notas.push(Number(nota.value))
     let soma = notas.reduce((acc, curr) => acc + curr);
@@ -33,9 +35,17 @@ function media(){
     soma/notas.length >= 7 ? result2.innerHTML += `Aprovado` : result2.innerHTML += `Reprovado`
 }
 
+
 function listar(){
-    listaSeparada = lista.value.split(",").sort()
-    for(let i = 0; i < listaSeparada.length; i++){
-        result3.innerHTML += `<hr>${listaSeparada[i]}`
-    }
+    result3.innerHTML = ``
+    novaLista = lista.value.split(",")
+    listaSeparada += novaLista
+}
+
+function filtrar(){
+    let filtrar = listaSeparada.filter((word) => {
+        if(word.length[0] == "a"){
+            result3filter.innerHTML = `éoq`
+        }
+        })
 }
