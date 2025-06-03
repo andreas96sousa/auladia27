@@ -1,5 +1,6 @@
 let listadeAtividades = []
 let notas = []
+let list = []
 function acrescentar(){
     switch(Number(prioridade.value)){
         case 1:
@@ -29,4 +30,13 @@ function media(){
     let soma = notas.reduce((acc, curr) => acc + curr);
     result2.innerHTML = `${soma/notas.length} <br>`
     soma/notas.length >= 7 ? result2.innerHTML += `Aprovado` : result2.innerHTML += `Reprovado`
+}
+
+function listar(){
+    listaseparada = lista.value
+    list += listaseparada.split(',')
+    list.sort
+    result3.innerHTML +=  `${list}`
+    for(let i = 0; i < list.length; i++){
+    }
 }
