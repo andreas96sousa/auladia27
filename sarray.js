@@ -1,5 +1,6 @@
 let listadeAtividades = []
 let notas = []
+
 let listaSeparada = []
 let novaLista = []
 function acrescentar(){
@@ -38,10 +39,19 @@ function media(){
 
 function listar(){
     result3.innerHTML = ``
-    novaLista = lista.value.split(",")
-    listaSeparada += novaLista
-}
+    novaLista += lista.value + ","
+    listaSeparada = novaLista.split(",").sort()
+    listaSeparada.forEach(element => {
+        if(element == ""){
+            
+        }
+    })
 
+    lista.value = ""
+
+    
+}
+ 
 function filtrar(){
     let filtrar = listaSeparada.filter((word) => {
         if(word.length[0] == "a"){
