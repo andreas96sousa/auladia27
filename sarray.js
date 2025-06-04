@@ -28,7 +28,6 @@ function mostrarLista(){
     listadeAtividades.forEach(item => result1.innerHTML += `${item} <br>`)
 }
 
-
 function media(){
     notas.push(Number(nota.value))
     let soma = notas.reduce((acc, curr) => acc + curr);
@@ -36,17 +35,16 @@ function media(){
     soma/notas.length >= 7 ? result2.innerHTML += `Aprovado` : result2.innerHTML += `Reprovado`
 }
 
-
 function listar(){
     result3.innerHTML = ``
     novaLista += lista.value
     let tamanhoDaString = novaLista.length 
     if (novaLista[tamanhoDaString-1] == ","){
-        listaSeparada = novaLista.split(",").sort()
+        listaSeparada = novaLista.trim().split(",").sort()
         listaSeparada.shift()
     }else{
         novaLista += ","
-        listaSeparada = novaLista.split(",").sort()
+        listaSeparada = novaLista.trim().split(",").sort()
         listaSeparada.shift()
     }
     for(let i = 0; i < listaSeparada.length; i++){
