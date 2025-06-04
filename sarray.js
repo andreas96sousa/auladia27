@@ -39,23 +39,28 @@ function media(){
 
 function listar(){
     result3.innerHTML = ``
-    novaLista += lista.value + ","
-    listaSeparada = novaLista.split(",").sort()
-    listaSeparada.forEach(element => {
-        if(element == ""){
-            
-        }
-    })
-
-    lista.value = ""
+    novaLista += lista.value
+    let tamanhoDaString = novaLista.length 
+    if (novaLista[tamanhoDaString-1] == ","){
+        listaSeparada = novaLista.split(",").sort()
+        listaSeparada.shift()
+    }else{
+        novaLista += ","
+        listaSeparada = novaLista.split(",").sort()
+        listaSeparada.shift()
+    }
+    for(let i = 0; i < listaSeparada.length; i++){
+        result3.innerHTML += `${listaSeparada[i]}<br> `
+    }
 
     
 }
  
 function filtrar(){
-    let filtrar = listaSeparada.filter((word) => {
-        if(word.length[0] == "a"){
-            result3filter.innerHTML = `éoq`
+    let letra = letraFiltrada.value 
+    listaSeparada.forEach(element => {
+        if(element[0] == letra){
+            result3filter.innerHTML += `${element}<br>`
         }
-        })
+    });
 }
